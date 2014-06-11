@@ -30,7 +30,7 @@ makeCacheMatrix <- function(origMatrix = matrix()) {
 #####################
 # cacheSolve function
 #####################
-# Input: data struction created by the makeCacheMatrix function
+# Input: data structure created by the makeCacheMatrix function
 # Output: numeric
 #
 # Description: Returns the inverse of a matrix. Caches previously
