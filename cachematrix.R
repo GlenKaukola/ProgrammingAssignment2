@@ -1,7 +1,7 @@
 ##########################
 # makeCacheMatrix function
 ##########################
-# Input: numeric matrix
+# Input: A numeric matrix
 # Output: matrix data structure with cached inverse
 #
 # Description: takes an R matrix and turns it into a data
@@ -31,7 +31,7 @@ makeCacheMatrix <- function(origMatrix = matrix()) {
 # cacheSolve function
 #####################
 # Input: data structure created by the makeCacheMatrix function
-# Output: numeric
+# Output: A numeric matrix
 #
 # Description: Returns the inverse of a matrix. Caches previously
 # calculated inverse to possibly speed up calculations.
