@@ -1,5 +1,6 @@
+##########################
 # makeCacheMatrix function
-#
+##########################
 # Input: numeric matrix
 # Output: matrix data structure with cached inverse
 #
@@ -26,8 +27,9 @@ makeCacheMatrix <- function(origMatrix = matrix()) {
 }
 
 
+#####################
 # cacheSolve function
-#
+#####################
 # Input: data struction created by the makeCacheMatrix function
 # Output: numeric
 #
@@ -47,3 +49,27 @@ cacheSolve <- function(x, ...) {
   x$setInverse(inverse)
   inverse
 }
+
+##############
+# Testing junk
+##############
+# simple 2x2
+matrix1 <- matrix(c(4, 2, 7, 6), 2, 2)
+
+# 2x2's inverse:
+matrix2 <- matrix(c(0.6, -0.2, -0.7, 0.4), 2, 2)
+
+# Make sure it's solving the problem
+cacheMatrix <- makeCacheMatrix(matrix1)
+solution <- cacheSolve(cacheMatrix)
+
+if (all.equal(solution, matrix2)) {
+  message("Getting the right solution is always good")
+} else {
+  message("Danger Will Robinsion!  We're not getting the correct answer!")
+  stopifnot(FALSE)
+}
+
+# And check to see if the cache is working
+message("It should spit out the message regarding using the cache. Here goes nothing...")
+solution2 <- cacheSolve(cacheMatrix)
